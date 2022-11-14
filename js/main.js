@@ -12,7 +12,6 @@ function validationFirstName() {
 
     if(fnameValue == "") {
         fname.classList.add('errorBorder');
-        fname.classList.add('errorBorder');
         inputBox.classList.add('fnameBox');
         form.classList.add('invalidFirstName');
         errorMsg.innerHTML = 'First Name cannot be empty';
