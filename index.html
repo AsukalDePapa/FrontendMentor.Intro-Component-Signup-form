@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <title>Intro Component With Sign Up Form</title>
+
+  <link rel="stylesheet" href="./dist/style.css">
+</head>
+<body>
+  <!-- Main -->
+  <main>
+    <section>
+      <article class="head grid-area-head">
+        <h1>Learn to code by watching others</h1>
+        <p>See how experienced developers solve problems in real-time. Watching scripted tutorials is great, but understanding how developers think is invaluable. </p>
+      </article>
+      <!-- Trial -->
+      <article class="login grid-area-login">
+        <div class="trial">
+          <p>Try it free 7 days <span>then $20/mo. thereafter</span></p>
+        </div>
+        <!-- Form Validation -->
+        <form action="/" method="GET" id="form">
+          <div class="inputBox" id="fn">
+            <input class="successBorder" type="text" name="fname" id="fname" placeholder="First Name" onkeydown="validationFirstName()" required/>
+            <span id="errorMsg"></span>
+          </div> 
+          <div class="inputBox" id="ln">
+            <input class="successBorder" type="text" name="lname" id="lname" placeholder="Last Name" onkeydown="validationLastName()" required/>
+            <span id="errorMsgLname"></span>
+          </div>
+          <div class="inputBox" id="e">
+            <input class="successBorder" type="email" name="email" id="email" placeholder="Email Address" onkeydown="validationEmail()" required/>
+            <span id="errorMsgEmail"></span>
+          </div>
+          <div class="inputBox" id="p">
+            <input class="successBorder" type="password" name="password" id="password" placeholder="Password" onkeydown="validationPassword()" required/>
+            <span id="errorMsgPass"></span>
+          </div>
+        
+          <button type="submit">Claim your free trial</button>
+         
+          <div class="terms-and-policy">
+            <p>
+              By clicking the button, you are agreeing to our 
+              <a href="">Terms and Services</a>
+            </p>
+          </div>
+        </form>
+      </article>
+    </section>
+  </main>
+  <!-- Footer -->
+  <footer>
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="https://www.linkedin.com/in/jerickson-tomajin-659a2a254/">Jeck</a>.
+    </p>
+  </footer>
+  <!-- JavaScript -->
+  <script src="./js/main.js"></script>
+</body>
+</html>

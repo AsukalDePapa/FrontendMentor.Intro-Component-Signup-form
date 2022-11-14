@@ -1,0 +1,333 @@
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  vertical-align: baseline;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.5;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  font-family: var(--ff-poppins);
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+a,
+a:focus,
+a:visited {
+  text-decoration: none;
+}
+
+:root {
+  --ff-poppins: "Poppins", sans-serif;
+  --red: hsl(0, 100%, 74%) ;
+  --green: hsl(154, 59%, 51%);
+  --dark-blue: hsl(249, 10%, 26%);
+  --grayish-blue: hsl(246, 25%, 77%);
+  --white: hsl(0, 0%, 100%);
+  --whitesmoke: hsl(0, 0%, 96%);
+  --blue: hsl(248, 32%, 49%);
+  --green-hover: hsl(154, 91%, 70%);
+}
+
+body {
+  background-image: url(../images/bg-intro-mobile.png);
+  background-repeat: no-repeat;
+  background-color: var(--red);
+  background-size: cover;
+}
+@media (min-width: 40em) {
+  body {
+    background-image: url(../images/bg-intro-desktop.png);
+  }
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 6.25rem 0;
+}
+
+section {
+  width: min(100%, 21.875rem);
+  display: grid;
+  gap: 4rem;
+  place-content: center;
+  grid-template-areas: "grid-area-head" "grid-area-login";
+}
+@media (min-width: 57.5em) {
+  section {
+    width: min(90%, 69.375rem);
+    grid-template-areas: "grid-area-head grid-area-login";
+  }
+}
+
+.head {
+  text-align: center;
+}
+.head h1,
+.head p {
+  color: var(--whitesmoke);
+}
+.head h1 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+}
+.head p {
+  font-size: 1.125rem;
+}
+@media (min-width: 40em) {
+  .head h1 {
+    font-size: 2.375rem;
+  }
+}
+@media (min-width: 57.5em) {
+  .head {
+    text-align: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+@media (min-width: 75em) {
+  .head h1 {
+    font-size: 3.5rem;
+  }
+}
+
+.trial {
+  background-color: var(--blue);
+  border-radius: 1rem;
+  padding: 1.5rem 4rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.trial p {
+  color: var(--whitesmoke);
+  font-weight: 600;
+}
+.trial p span {
+  font-weight: 400;
+}
+
+form {
+  position: relative;
+  background-color: var(--white);
+  padding: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+  border-radius: 0.75rem;
+}
+form .inputBox {
+  position: relative;
+  width: 100%;
+}
+form .inputBox input {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 0.75rem 1.25rem;
+  border-radius: 0.4375rem;
+}
+form .inputBox input::-moz-placeholder {
+  font-weight: 600;
+  color: var(--dark-blue);
+}
+form .inputBox input:-ms-input-placeholder {
+  font-weight: 600;
+  color: var(--dark-blue);
+}
+form .inputBox input::placeholder {
+  font-weight: 600;
+  color: var(--dark-blue);
+}
+form .inputBox span {
+  margin-top: 2px;
+  color: red;
+  font-size: 0.75rem;
+  display: block;
+  text-align: right;
+  font-style: italic;
+}
+form button {
+  background-color: var(--green);
+  width: 100%;
+  padding: 1.125rem;
+  border-radius: 0.4375rem;
+  border-bottom: 3px solid hsl(154deg, 51%, 38%);
+  color: var(--white);
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.0625rem;
+  cursor: pointer;
+}
+form button:hover {
+  scale: 0.975;
+  background-color: var(--green-hover);
+}
+form .terms-and-policy {
+  text-align: center;
+  padding-inline: 1rem;
+  font-size: 0.6875rem;
+  color: var(--grayish-blue);
+  font-weight: 500;
+}
+form .terms-and-policy a {
+  color: var(--red);
+  font-weight: 700;
+  text-decoration: underline;
+}
+form .terms-and-policy a:hover {
+  text-decoration: none;
+}
+@media (min-width: 75em) {
+  form {
+    padding: 2rem;
+  }
+  form .terms-and-policy {
+    padding-inline: 1.5625rem;
+  }
+}
+
+.grid-area-head {
+  grid-area: grid-area-head;
+}
+
+.grid-area-login {
+  grid-area: grid-area-login;
+}
+
+.successBorder {
+  border: var(--grayish-blue) 1px solid;
+}
+.successBorder:focus {
+  border: var(--dark-blue) 1px solid;
+}
+
+.errorBorder {
+  border: red 1px solid;
+}
+.errorBorder:focus {
+  border: red 1px solid;
+}
+
+#form.invalidFirstName .fnameBox::after {
+  content: "";
+  position: absolute;
+  top: 0.875rem;
+  right: 1.5625rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-image: url(../images/icon-error.svg);
+  background-size: cover;
+}
+
+#form.invalidLastName .lnameBox::after {
+  content: "";
+  position: absolute;
+  top: 0.875rem;
+  right: 1.5625rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-image: url(../images/icon-error.svg);
+  background-size: cover;
+}
+
+#form.invalid .emailBox::after {
+  content: "";
+  position: absolute;
+  top: 0.875rem;
+  right: 1.5625rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-image: url(../images/icon-error.svg);
+  background-size: cover;
+}
+
+#form.invalid .passBox::after {
+  content: "";
+  position: absolute;
+  top: 0.875rem;
+  right: 1.5625rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-image: url(../images/icon-error.svg);
+  background-size: cover;
+}
+
+footer {
+  margin-top: auto;
+  margin-bottom: 10px;
+}
+
+.attribution {
+  font-size: 0.9375rem;
+  text-align: center;
+  color: var(--dark-blue);
+}
+
+.attribution a {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--white);
+  position: relative;
+}
+.attribution a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin-inline: auto;
+  width: 0;
+  height: 3px;
+  background-color: var(--white);
+  transition: 0.5s ease-in-out;
+}
+.attribution a:hover::after {
+  width: 100%;
+}/*# sourceMappingURL=style.css.map */
